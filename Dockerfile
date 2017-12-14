@@ -17,7 +17,7 @@ RUN         gem install bundler
 RUN         bundle config --global silence_root_warning 1
 
 RUN         git clone https://github.com/opentox/lazar.git \ 
-            && (cd lazar && git checkout "feature/pure" && bundle install --path ~/.gem)
+            && (cd lazar && git checkout "ORN" && bundle install --path ~/.gem)
 
 RUN         git clone https://github.com/opentox/qsar-report.git \
             && (cd qsar-report && git checkout "development" && bundle install --path ~/.gem)
