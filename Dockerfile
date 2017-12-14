@@ -28,7 +28,9 @@ RUN         git clone https://github.com/opentox/lazar-gui.git \
             && (cd lazar-gui && git checkout "development" && bundle install --path ~/.gem)
 
 COPY        start.sh /home/ist/start.sh
+COPY        rserve.rb /home/ist/rserve.rb
 WORKDIR     /home/ist
 RUN         sudo chmod +x /home/ist/start.sh
+RUN         sudo chmod +x /home/ist/rserve.rb
 ENTRYPOINT  ["/home/ist/start.sh"]
 
