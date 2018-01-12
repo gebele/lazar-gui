@@ -11,7 +11,7 @@ RUN         echo "ist ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 USER        ist
 WORKDIR     /home/ist
 RUN         echo 'gem: --user-install --no-document' > ~/.gemrc
-ENV         PATH $PATH:/home/ist/.gem/ruby/2.4.0/bin
+ENV         PATH $PATH:/home/ist/.gem/ruby/2.5.0/bin
 RUN         export GEM_HOME=$(ruby -e 'print Gem.user_dir')
 RUN         gem install bundler
 RUN         bundle config --global silence_root_warning 1
